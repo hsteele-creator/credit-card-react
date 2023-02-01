@@ -1,9 +1,11 @@
 export const Data = {
-  "John Smith" : {
+  currentUser: "John",
+  currentCard: 0,
+  John: {
     cards: [
       {
         cardType: "VISA",
-        cardNumber: 4485076160182107,
+        cardNumber: "4485076160182107",
         month: "02",
         year: "2025",
         cvv: 631,
@@ -15,7 +17,7 @@ export const Data = {
       },
       {
         cardType: "MASTERCARD",
-        cardNumber: 5203906260947058,
+        cardNumber: "5203906260947058",
         month: "04",
         year: "2028",
         cvv: 183,
@@ -27,7 +29,7 @@ export const Data = {
       },
       {
         cardType: "DISCOVER",
-        cardNumber: 6011830616693515,
+        cardNumber: "6011830616693515",
         month: "07",
         year: "2026",
         cvv: 410,
@@ -40,11 +42,12 @@ export const Data = {
     ],
   },
 
-  "Tim Arthur" : {
+  Tyler: {
+    name: "Tyler Johnson",
     cards: [
       {
         cardType: "AMEX",
-        cardNumber: 348426549087847,
+        cardNumber: "348426549087847",
         month: "05",
         year: "2023",
         cvv: 268,
@@ -56,7 +59,7 @@ export const Data = {
       },
       {
         cardType: "UNIONPAY",
-        cardNumber: 6222026073857579,
+        cardNumber: "6222026073857579",
         month: "08",
         year: "2027",
         cvv: 732,
@@ -68,7 +71,7 @@ export const Data = {
       },
       {
         cardType: "VISA",
-        cardNumber: 4485446741380498,
+        cardNumber: "4485446741380498",
         month: "06",
         year: "2024",
         cvv: 143,
@@ -81,11 +84,12 @@ export const Data = {
     ],
   },
 
-  "Jack Lewis" : {
+  Jake: {
+    name: "Steve Wright",
     cards: [
       {
         cardType: "DINERS",
-        cardNumber: 3898422938975658,
+        cardNumber: "3898422938975658",
         month: "07",
         year: "2026",
         cvv: 437,
@@ -97,7 +101,7 @@ export const Data = {
       },
       {
         cardType: "AMEX",
-        cardNumber: 343371115714694,
+        cardNumber: "343371115714694",
         month: "09",
         year: "2029",
         cvv: 108,
@@ -109,7 +113,7 @@ export const Data = {
       },
       {
         cardType: "VISA",
-        cardNumber: 4408345140263509,
+        cardNumber: "4408345140263509",
         month: "07",
         year: "2026",
         cvv: 700,
@@ -121,7 +125,4 @@ export const Data = {
       },
     ],
   },
-
-
-
 };

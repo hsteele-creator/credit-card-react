@@ -10,6 +10,7 @@ const Nav = () => {
         <div><NavLink to="/">Home</NavLink></div>
         <div><NavLink to="/AddCard">Add Card</NavLink></div>
         <div><NavLink to="/Contact">Contact</NavLink></div>
+        <div><NavLink to="/UpdateInfo">Update Info</NavLink></div>
     </div>
 
  

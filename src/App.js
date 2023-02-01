@@ -6,10 +6,10 @@ import Home from "./Home";
 import AddCard from "./AddCard";
 import Contact from "./Contact";
 import Nav from "./Nav";
+import UpdateInfo from "./UpdateInfo";
 
 function App() {
   const store = useSelector((store) => store.Data);
-  console.log(store);
 
   return (
     <>
@@ -19,7 +19,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Contact" element={<Contact />} />
           <Route exact path="/AddCard" element={<AddCard />} />
-          <Route />
+          <Route exact path="/UpdateInfo" element={<UpdateInfo />} />
         </Routes>
       </BrowserRouter>
     </>

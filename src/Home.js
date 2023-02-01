@@ -1,7 +1,14 @@
 import React from "react";
+import CreditCard from "./CreditCard";
+import SelectCard from "./SelectCard";
 
 const Home = () => {
-    return <h1>Home</h1>
+    return (
+        <>
+        <CreditCard />
+        <SelectCard />
+        </>
+    ) 
 }
 
 export default Home
