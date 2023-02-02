@@ -9,6 +9,7 @@ export const Data = {
         month: "02",
         year: "2025",
         cvv: 631,
+        balance: `24,000`,
         transactions: [
           { price: "5", transaction: "starbucks", negative: true },
           { price: "1,000", transaction: "paycheck", negative: false },
@@ -21,6 +22,7 @@ export const Data = {
         month: "04",
         year: "2028",
         cvv: 183,
+        balance : `12,500`,
         transactions: [
           { price: "7.50", transaction: "walgreens", negative: true },
           { price: "1,800", transaction: "rent", negative: true },
@@ -33,6 +35,7 @@ export const Data = {
         month: "07",
         year: "2026",
         cvv: 410,
+        balance : `8,750`,
         transactions: [
           { price: "350", transaction: "car payment", negative: true },
           { price: "120", transaction: "birthday gift", negative: false },
@@ -51,6 +54,7 @@ export const Data = {
         month: "05",
         year: "2023",
         cvv: 268,
+        balance: `2,500`,
         transactions: [
           { price: "12", transaction: "pizza", negative: true },
           { price: "1,400", transaction: "paycheck", negative: false },
@@ -63,6 +67,7 @@ export const Data = {
         month: "08",
         year: "2027",
         cvv: 732,
+        balance: `3,800`,
         transactions: [
           { price: "40", transaction: "gas", negative: true },
           { price: "30", transaction: "chinese food", negative: true },
@@ -75,6 +80,7 @@ export const Data = {
         month: "06",
         year: "2024",
         cvv: 143,
+        balance: `4,200`,
         transactions: [
           { price: "120", transaction: "electric bill", negative: true },
           { price: "120", transaction: "wedding present", negative: false },
@@ -93,6 +99,7 @@ export const Data = {
         month: "07",
         year: "2026",
         cvv: 437,
+        balance: `500`,
         transactions: [
           { price: "10", transaction: "coffee and donut", negative: true },
           { price: "2,000", transaction: "rent payments", negative: false },
@@ -105,6 +112,7 @@ export const Data = {
         month: "09",
         year: "2029",
         cvv: 108,
+        balance: `5,100`,
         transactions: [
           { price: "2", transaction: "711 slurpee", negative: true },
           { price: "60", transaction: "new shirts", negative: true },
@@ -117,6 +125,7 @@ export const Data = {
         month: "07",
         year: "2026",
         cvv: 700,
+        balance: `2,650`,
         transactions: [
           { price: "160", transaction: "dentist appointment", negative: true },
           { price: "15", transaction: "new backpack", negative: true },

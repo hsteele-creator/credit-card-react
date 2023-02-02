@@ -8,7 +8,7 @@ const [cardIndex, setCardIndex] = useState(0)
 
   const store = useSelector((state) => state.Data);
   const currentUser = useSelector((state) => state.Data.currentUser);
-  const currentCardIndex = useSelector((state) => state.Data.currentCard);
+//   const currentCardIndex = useSelector((state) => state.Data.currentCard);
   const currentCard = store[currentUser].cards[cardIndex];
   const currentCardNumber = currentCard.cardNumber.replace(/\d(?=\d{4})/g, "*");
 
@@ -25,22 +25,30 @@ const [cardIndex, setCardIndex] = useState(0)
 
   return (
     <>
-      <h1 id="title">Current Card</h1>
-      <button onClick={updateCard}>+</button>
-      <button onClick={lowerCard}>-</button>
+      <h1 id="title">Your Cards</h1>
+
+      <span className="arrow" onClick={lowerCard}>-</span>
+
+      <span className="arrow" onClick={updateCard}>+</span>
+    
+      
       <div className="credit-card-container">
+
         <div className="front-card">
           <span className="info">
             <h3 id="name">{currentUser}</h3>
             <h3 id="card-number">{currentCardNumber}</h3>
           </span>
-
           <span className="card-data">
             <h3 id="card-type">{currentCard.cardType}</h3>
-            <h3 id="card-balance">240,350</h3>
+            <h3 id="card-balance">balance : ${currentCard.balance}</h3>
           </span>
         </div>
+
       </div>
+
+
+
     </>
   );
 };
