@@ -2,53 +2,56 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 import "./CreditCard.css";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import Transaction from "./Transaction";
 
 const CreditCard = () => {
-const [cardIndex, setCardIndex] = useState(0)
-
-  const store = useSelector((state) => state.Data);
+  const [cardIndex, setCardIndex] = useState(0);
   const currentUser = useSelector((state) => state.Data.currentUser);
-//   const currentCardIndex = useSelector((state) => state.Data.currentCard);
-  const currentCard = store[currentUser].cards[cardIndex];
-  const currentCardNumber = currentCard.cardNumber.replace(/\d(?=\d{4})/g, "*");
+  const currentData = useSelector((state) => state.Data[currentUser]);
+  const cards = currentData.cards;
+  console.log(cards);
 
-  const updateCard = () => {
-    setCardIndex(cardIndex => cardIndex !== 2 ? cardIndex + 1 : cardIndex)
-  }
+  console.log(cardIndex)
 
-  const lowerCard = () => {
-    setCardIndex(cardIndex => cardIndex !== 0 ? cardIndex - 1 : cardIndex)
-  }
-  
-
-  console.log(currentCard)
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+      slidesToSlide: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+      slidesToSlide: 1,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1,
+    },
+  };
 
   return (
     <>
-      <h1 id="title">Your Cards</h1>
-
-      <span className="arrow" onClick={lowerCard}>-</span>
-
-      <span className="arrow" onClick={updateCard}>+</span>
-    
-      
-      <div className="credit-card-container">
-
-        <div className="front-card">
-          <span className="info">
-            <h3 id="name">{currentUser}</h3>
-            <h3 id="card-number">{currentCardNumber}</h3>
-          </span>
-          <span className="card-data">
-            <h3 id="card-type">{currentCard.cardType}</h3>
-            <h3 id="card-balance">balance : ${currentCard.balance}</h3>
-          </span>
-        </div>
-
+      <h1 id="card-title">Your Cards</h1>
+      <div className="container">
+        <Carousel
+          responsive={responsive}
+          afterChange={(previousSlide, { currentSlide, onMove }) => {
+            setCardIndex(currentSlide > previousSlide ? cardIndex + 1 : cardIndex - 1);
+          }}
+        >
+          {currentData.cards.map((card, i) => {
+            return (
+              <div key={i} className="card">
+                {card.cardNumber}
+              </div>
+            );
+          })}
+        </Carousel>
       </div>
-
-
-
     </>
   );
 };

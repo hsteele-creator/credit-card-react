@@ -12,6 +12,7 @@ const Nav = () => {
         <div><NavLink to="/Contact">Contact</NavLink></div>
         <div><NavLink to="/UpdateInfo">Update Info</NavLink></div>
     </div>
+    
 
  
     </>

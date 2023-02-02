@@ -2,6 +2,7 @@ export const Data = {
   currentUser: "John",
   currentCard: 0,
   John: {
+    name: "John Johnson",
     cards: [
       {
         cardType: "VISA",
