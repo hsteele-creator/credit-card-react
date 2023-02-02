@@ -5,7 +5,7 @@ console.log(INITIAL_STATE)
 
 const rootReducer = (state = INITIAL_STATE, action) => {
   switch(action.type) {
-    case action.type === "UPDATE_CARD":
+    case "UPDATE_CARD":
       return {
         ...state,
         currentCard: action.payload.card,
