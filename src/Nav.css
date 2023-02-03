@@ -12,6 +12,7 @@ ul {
     justify-content: space-around;
     background-color: lightskyblue;
     padding: 2% 0;
+    width: 100%;
 }
 
 .NavLink {

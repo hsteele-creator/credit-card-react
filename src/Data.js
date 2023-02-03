@@ -1,6 +1,7 @@
 export const Data = {
   currentUser: "John",
   currentCard: 0,
+  cardIndex : 0,
   John: {
     name: "John Johnson",
     cards: [

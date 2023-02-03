@@ -1,7 +1,19 @@
 import React from "react";
 
-const Transaction = () => {
-    return <h1>transaction</h1>
-}
+const Transaction = ({ transactions }) => {
+  console.log(transactions);
+  return (
+    <div>
+      {transactions.map((transaction) => {
+        return (
+            <>
+            <h1>{transaction.transaction}</h1>
+            <h2>{transaction.price}</h2>
+            </>
+        );
+      })}
+    </div>
+  );
+};
 
-export default Transaction
+export default Transaction;

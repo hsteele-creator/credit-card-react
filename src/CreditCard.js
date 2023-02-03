@@ -11,9 +11,9 @@ const CreditCard = () => {
   const currentUser = useSelector((state) => state.Data.currentUser);
   const currentData = useSelector((state) => state.Data[currentUser]);
   const cards = currentData.cards;
-  console.log(cards);
+  const transactions = cards[cardIndex].transactions
+  // console.log(transactions);
 
-  console.log(cardIndex)
 
   const responsive = {
     desktop: {
@@ -52,6 +52,9 @@ const CreditCard = () => {
           })}
         </Carousel>
       </div>
+
+      <Transaction transactions={transactions} />
+
     </>
   );
 };
