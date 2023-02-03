@@ -1,9 +1,11 @@
 export const Data = {
   currentUser: "John",
   currentCard: 0,
-  cardIndex : 0,
+  cardIndex: 0,
   John: {
     name: "John Johnson",
+    image:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1200&q=60",
     cards: [
       {
         cardType: "VISA",
@@ -24,7 +26,7 @@ export const Data = {
         month: "04",
         year: "2028",
         cvv: 183,
-        balance : `12,500`,
+        balance: `12,500`,
         transactions: [
           { price: "7.50", transaction: "walgreens", negative: true },
           { price: "1,800", transaction: "rent", negative: true },
@@ -37,7 +39,7 @@ export const Data = {
         month: "07",
         year: "2026",
         cvv: 410,
-        balance : `8,750`,
+        balance: `8,750`,
         transactions: [
           { price: "350", transaction: "car payment", negative: true },
           { price: "120", transaction: "birthday gift", negative: false },
@@ -49,6 +51,8 @@ export const Data = {
 
   Tyler: {
     name: "Tyler Johnson",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1200&q=60",
     cards: [
       {
         cardType: "AMEX",
@@ -94,6 +98,8 @@ export const Data = {
 
   Jake: {
     name: "Steve Wright",
+    image:
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1200&q=60",
     cards: [
       {
         cardType: "DINERS",

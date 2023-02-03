@@ -7,6 +7,7 @@ import AddCard from "./AddCard";
 import Contact from "./Contact";
 import Nav from "./Nav";
 import UpdateInfo from "./UpdateInfo";
+import Avatars from "./Avatars";
 
 function App() {
   const store = useSelector((store) => store.Data);
@@ -15,6 +16,7 @@ function App() {
     <>
       <BrowserRouter>
         <Nav />
+        <Avatars />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Contact" element={<Contact />} />

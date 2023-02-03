@@ -1,18 +1,24 @@
 import React from "react";
+import "./Transaction.css";
 
 const Transaction = ({ transactions }) => {
   console.log(transactions);
   return (
-    <div>
-      {transactions.map((transaction) => {
-        return (
+    <>
+      <h1 id="transactions-title">Transactions</h1>
+      <ul className="transaction-container">
+        {transactions.map((transaction) => {
+          return (
             <>
-            <h1>{transaction.transaction}</h1>
-            <h2>{transaction.price}</h2>
+              <li className="t">
+                <h3>{transaction.transaction}</h3>
+                <p>{transaction.price}</p>
+              </li>
             </>
-        );
-      })}
-    </div>
+          );
+        })}
+      </ul>
+    </>
   );
 };
 
