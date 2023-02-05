@@ -47,7 +47,11 @@ const CreditCard = () => {
           {currentData.cards.map((card, i) => {
             return (
               <div key={i} className="card">
-                {card.cardNumber}
+                <p>{card.cardNumber}</p>
+                <p>{card.cardType}</p>
+                <p>{card.year}</p>
+                <p>{currentUser}</p>
+                <p>Balance : {card.balance} </p>
               </div>
             );
           })}

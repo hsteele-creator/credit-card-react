@@ -6,17 +6,27 @@
 
 .container {
   width: 500px;
-  height: 400px;
+  height: 250px;
   margin-left: auto;
   margin-right: auto;
 }
 
+.container p {
+  text-align: center;
+  padding: 7px 0;
+  font-size: 12px;
+  color: #ececec;
+}
+
 .card {
-  height: 300px;
+  height: 150px;
   width: 300px;
   margin-left: auto;
   margin-right: auto;
-  background-color: red;
+  background-color:  #ececec;
+  border-radius: 12px;
+  background-color:  #385170;
+  border: 1px solid #ececec;
 }
 
 #button-container {
@@ -34,4 +44,7 @@
   margin-right: auto;
   padding: 10px 0;
   border-radius: 12px;
+  color: #ececec;
+  border: 1px solid #ececec;
+  background-color: #385170;
 }

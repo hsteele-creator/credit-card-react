@@ -28,6 +28,7 @@ const Avatars = () => {
               className="avatar"
               src={store[name].image}
               onClick={() => updateUser(name)}
+              style={{border : name === currentUser ? "1px solid white" : "none", }}
             />
           </div>
         );

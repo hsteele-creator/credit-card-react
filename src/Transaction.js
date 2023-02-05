@@ -10,9 +10,9 @@ const Transaction = ({ transactions }) => {
         {transactions.map((transaction) => {
           return (
             <>
-              <li className="t">
-                <h3>{transaction.transaction}</h3>
-                <p>{transaction.price}</p>
+              <li className="transaction">
+                <h3 style={{color : transaction.negative === true ? "red" : "#007FFF"}}>{transaction.transaction}</h3>
+                <p style={{color : transaction.negative === true ? "red" : "#007FFF"}}>{transaction.price}</p>
               </li>
             </>
           );
