@@ -5,6 +5,7 @@ import "./CreditCard.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Transaction from "./Transaction";
+import { NavLink } from "react-router-dom";
 
 const CreditCard = () => {
   const [cardIndex, setCardIndex] = useState(0);
@@ -35,7 +36,7 @@ const CreditCard = () => {
 
   return (
     <>
-      <h1 id="card-title">Your Cards</h1>
+      <h2 id="card-title">The current user is {currentUser}</h2>
       <div className="container">
         <Carousel
           responsive={responsive}
@@ -53,7 +54,15 @@ const CreditCard = () => {
         </Carousel>
       </div>
 
+      <NavLink to="/AddCard">
+          <div id="button-container">
+          <button id="add-card">Add Card</button>
+          </div>
+      </NavLink>
+
       <Transaction transactions={transactions} />
+
+
 
     </>
   );

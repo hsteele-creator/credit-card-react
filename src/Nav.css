@@ -10,7 +10,7 @@ ul {
 .nav-container {
     display: flex;
     justify-content: space-around;
-    background-color: lightskyblue;
+    background-color:#385170;
     padding: 2% 0;
     width: 100%;
 }
@@ -25,5 +25,5 @@ a {
 }
 
 a.active {
-    color: white;
+    color: #ececec;
 }

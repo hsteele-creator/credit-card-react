@@ -1,13 +1,12 @@
+
 #card-title {
   text-align: center;
-  margin: 20px 0;
+  margin-bottom: 30px;
 }
-
 
 .container {
   width: 500px;
   height: 400px;
-  /* background-color: green; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -18,4 +17,21 @@
   margin-left: auto;
   margin-right: auto;
   background-color: red;
+}
+
+#button-container {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-top: -5%;
+}
+
+#add-card {
+  width: 150px;
+  border: 1px solid;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0;
+  border-radius: 12px;
 }
