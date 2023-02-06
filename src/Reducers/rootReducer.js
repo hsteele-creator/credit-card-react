@@ -9,9 +9,21 @@ const rootReducer = (state = INITIAL_STATE, action) => {
         Data : {
           ...Data, 
           currentUser: action.payload.name,
+        },
+      }
+    case "ADD_CARD":
+      return {
+        Data : {
+          ...Data,
+          [action.payload.name] : {
+            ...state,
+            cards : [
+              ...cards,
+              action.payload.data
+            ]
+          }
         }
-        
-      };
+      }
   }
   return state;
 };

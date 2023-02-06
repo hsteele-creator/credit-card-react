@@ -6,6 +6,6 @@ export const updateUser = (name) => {
 
 export const ADD_CARD = "ADD_CARD"
 
-export const addCard = (data) => {
-    return {type: ADD_CARD, payload : {data}}
+export const addCard = (data, name) => {
+    return {type: ADD_CARD, payload : {data, name}}
 }
