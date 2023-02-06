@@ -12,9 +12,8 @@ const CreditCard = () => {
   const currentUser = useSelector((state) => state.Data.currentUser);
   const currentData = useSelector((state) => state.Data[currentUser]);
   const cards = currentData.cards;
-  const transactions = cards[cardIndex].transactions
+  const transactions = cards[cardIndex].transactions;
   // console.log(transactions);
-
 
   const responsive = {
     desktop: {
@@ -41,7 +40,9 @@ const CreditCard = () => {
         <Carousel
           responsive={responsive}
           afterChange={(previousSlide, { currentSlide, onMove }) => {
-            setCardIndex(currentSlide > previousSlide ? cardIndex + 1 : cardIndex - 1);
+            setCardIndex(
+              currentSlide > previousSlide ? cardIndex + 1 : cardIndex - 1
+            );
           }}
         >
           {currentData.cards.map((card, i) => {
@@ -59,15 +60,12 @@ const CreditCard = () => {
       </div>
 
       <NavLink to="/AddCard">
-          <div id="button-container">
+        <div id="button-container">
           <button id="add-card">Add Card</button>
-          </div>
+        </div>
       </NavLink>
 
       <Transaction transactions={transactions} />
-
-
-
     </>
   );
 };

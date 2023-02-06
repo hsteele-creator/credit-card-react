@@ -13,6 +13,7 @@ ul {
     background-color:#385170;
     padding: 2% 0;
     width: 100%;
+    margin: 0;
 }
 
 .NavLink {
@@ -27,3 +28,9 @@ a {
 a.active {
     color: #ececec;
 }
+
+@media only screen and (max-width: 600px) {
+    .nav-container {
+        width: 600px;
+    }
+  }

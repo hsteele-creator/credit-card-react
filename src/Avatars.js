@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./Avatar.css";
-// import { updateUser } from "./Actions";
+import { updateUser } from "./Actions";
 
 const Avatars = () => {
   const dispatch = useDispatch();
@@ -12,13 +12,7 @@ const Avatars = () => {
     (name) =>
       name !== "currentUser" && name !== "currentCard" && name !== "cardIndex"
   );
-
-  console.log(store);
-
-  const updateUser = (name) => {
-    return dispatch({ type: "UPDATE_USER", payload: { name } });
-  };
-
+  
   return (
     <div className="images-container">
       {names.map((name) => {
@@ -27,7 +21,7 @@ const Avatars = () => {
             <img
               className="avatar"
               src={store[name].image}
-              onClick={() => updateUser(name)}
+              onClick={() => dispatch(updateUser(name))}
               style={{border : name === currentUser ? "1px solid white" : "none", }}
             />
           </div>

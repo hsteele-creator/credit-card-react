@@ -7,7 +7,7 @@ const Transaction = ({ transactions }) => {
     <>
       <h1 id="transactions-title">Transactions</h1>
       <ul className="transaction-container">
-        {transactions.map((transaction) => {
+        {transactions ? transactions.map((transaction) => {
           return (
             <>
               <li className="transaction">
@@ -16,7 +16,7 @@ const Transaction = ({ transactions }) => {
               </li>
             </>
           );
-        })}
+        }) : <h1>This card doesent have any transactions</h1>}
       </ul>
     </>
   );
