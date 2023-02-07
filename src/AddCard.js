@@ -2,7 +2,7 @@ import React from "react";
 import "./AddCard.css";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addCard } from "./Actions";
+import { addCard, ADD_CARD } from "./Actions";
 
 const AddCard = () => {
   const [cardData, setCardData] = useState({
@@ -26,7 +26,7 @@ const AddCard = () => {
 
   const add = () => {
     console.log("hello");
-    dispatch(addCard(cardData, currentUser))
+    return dispatch({type: "ADD_CARD", payload : {name : currentUser, data : cardData}})
   }
 
   console.log(cardData)
