@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import AddCard from "./AddCard";
-import Contact from "./Contact";
+import Goals from "./Goals";
 import Nav from "./Nav";
 import UpdateInfo from "./UpdateInfo";
 import Avatars from "./Avatars";
@@ -19,7 +19,7 @@ function App() {
         <Avatars />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/Contact" element={<Contact />} />
+          <Route exact path="/Goals" element={<Goals />} />
           <Route exact path="/AddCard" element={<AddCard />} />
           <Route exact path="/UpdateInfo" element={<UpdateInfo />} />
         </Routes>

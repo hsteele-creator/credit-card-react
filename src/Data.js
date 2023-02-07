@@ -2,7 +2,7 @@ export const Data = {
   currentUser: "John",
   currentCard: 0,
   cardIndex: 0,
-  "John": {
+  John: {
     name: "John Johnson",
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1200&q=60",
@@ -47,9 +47,14 @@ export const Data = {
         ],
       },
     ],
+    goals: [
+      "make a savings account",
+      "save money for a diamond ring",
+      "pay off college debt",
+    ],
   },
 
-  "Tyler": {
+  Tyler: {
     name: "Tyler Johnson",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1200&q=60",
@@ -94,9 +99,14 @@ export const Data = {
         ],
       },
     ],
+    goals: [
+      "increase salary by 10%",
+      "buy a new car",
+      "set aside money for kids college fund",
+    ],
   },
 
-  "Jake": {
+  Jake: {
     name: "Steve Wright",
     image:
       "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1200&q=60",
@@ -140,6 +150,11 @@ export const Data = {
           { price: "300", transaction: "graduation gift", negative: false },
         ],
       },
+    ],
+    goals: [
+      "buy a new phone",
+      "save for house down payment",
+      "get another source of income",
     ],
   },
 };

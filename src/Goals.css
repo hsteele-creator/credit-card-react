@@ -1,0 +1,15 @@
+#goals {
+    width: 50%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#todo {
+    display: flex;
+    justify-content: space-around;
+}
+
+#goal {
+    width: 200px;
+}

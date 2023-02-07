@@ -3,7 +3,6 @@ import { Data } from "../Data";
 const INITIAL_STATE = { Data };
 
 const rootReducer = (state = INITIAL_STATE, action) => {
-  console.log(state);
   switch (action.type) {
     case "UPDATE_USER":
       return {
@@ -15,13 +14,14 @@ const rootReducer = (state = INITIAL_STATE, action) => {
     case "ADD_CARD":
       console.log("card added")
       return {
-        Data: {
-          ...Data,
-          [action.payload.name]: {
-            ...[action.payload.name],
-            "cards": [...action.payload.name.cards, action.payload.data],
-          },
-        },
+      ...state,
+      Data : {
+        ...Data,
+        [action.payload.name] : {
+          ...Data[action.payload.name],
+          cards : [...Data[action.payload.name].cards, action.payload.data]
+        }
+      }
       };
   }
   return state;

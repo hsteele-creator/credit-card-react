@@ -15,9 +15,9 @@ const Avatars = () => {
   
   return (
     <div className="images-container">
-      {names.map((name) => {
+      {names.map((name, i) => {
         return (
-          <div className="image-container">
+          <div className="image-container" key={i}>
             <img
               className="avatar"
               src={store[name].image}
