@@ -1,8 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
 #goals {
     width: 50%;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+    background-color: azure;
 }
 
 #todo {
@@ -12,4 +17,11 @@
 
 #goal {
     width: 200px;
+    padding: 20px 0;
+}
+
+#remove, #toggle {
+   height: 20px;
+   margin-top: auto;
+   margin-bottom: auto;
 }

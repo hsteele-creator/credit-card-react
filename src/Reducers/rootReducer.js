@@ -12,17 +12,21 @@ const rootReducer = (state = INITIAL_STATE, action) => {
         },
       };
     case "ADD_CARD":
-      console.log("card added")
+      console.log("card added");
       return {
-      ...state,
-      Data : {
-        ...Data,
-        [action.payload.name] : {
-          ...Data[action.payload.name],
-          cards : [...Data[action.payload.name].cards, action.payload.data]
-        }
-      }
+        ...state,
+        Data: {
+          ...Data,
+          [action.payload.name]: {
+            ...Data[action.payload.name],
+            cards: [...Data[action.payload.name].cards, action.payload.data],
+          },
+        },
       };
+    case "REMOVE_GOAL":
+      console.log("remove todo");
+    case "TOGGLE_GOAL":
+      console.log("toggle todo");
   }
   return state;
 };
