@@ -24,9 +24,30 @@ const rootReducer = (state = INITIAL_STATE, action) => {
         },
       };
     case "REMOVE_GOAL":
-      console.log("remove todo");
+      return {
+        ...state,
+        Data: {
+          ...Data,
+          [action.payload.name]: {
+            ...Data[action.payload.name],
+            goals: [
+              ...Data[action.payload.name].goals,
+              { goal: action.payload.goal, completed: false },
+            ],
+          },
+        },
+      };
     case "TOGGLE_GOAL":
-      console.log("toggle todo");
+      return {
+        ...state,
+        Data: {
+          ...Data,
+          [action.payload.name]: {
+            ...Data[action.payload.name],
+            goals: goals.filter((goal) => goal.goal === action.payload.goal),
+          },
+        },
+      };
   }
   return state;
 };

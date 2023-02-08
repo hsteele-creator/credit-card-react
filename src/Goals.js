@@ -24,7 +24,7 @@ const Goals = () => {
         {goals.map((goal, i) => {
           return (
             <div key={i} id="todo">
-              <li id="goal">{goal}</li>
+              <li id="goal">{goal.goal}</li>
               <button id="remove" onClick={() => remove()}>
                 Remove
               </button>

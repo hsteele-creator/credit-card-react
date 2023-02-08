@@ -48,9 +48,9 @@ export const Data = {
       },
     ],
     goals: [
-      "make a savings account",
-      "save money for a diamond ring",
-      "pay off college debt",
+      { goal: "make a savings account", completed: false },
+      { goal: "save money for a diamond ring", completed: false },
+      { goal: "pay off college debt", completed: false },
     ],
   },
 
@@ -100,9 +100,9 @@ export const Data = {
       },
     ],
     goals: [
-      "increase salary by 10%",
-      "buy a new car",
-      "set aside money for kids college fund",
+      { goal: "increase salary by 10%", completed: false },
+      { goal: "buy a new car", completed: false },
+      { goal: "set aside money for kids college fund", completed: false },
     ],
   },
 
@@ -152,9 +152,9 @@ export const Data = {
       },
     ],
     goals: [
-      "buy a new phone",
-      "save for house down payment",
-      "get another source of income",
+      { goal: "buy a new phone", completed: false },
+      { goal: "save for house down payment", completed: false },
+      { goal: "get another source of income", completed: false },
     ],
   },
 };
