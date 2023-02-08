@@ -14,6 +14,10 @@ const CreditCard = () => {
   const cards = currentData.cards;
   const transactions = cards[cardIndex].transactions;
   // console.log(transactions);
+  // console.log(currentData.cards);
+  const filteredCards = currentData.cards.filter(
+    (card) => card.cardNumber !== "" && card.cardType !== "" && card.year !=="" && card.balnce !== ""
+  );
 
   const responsive = {
     desktop: {
@@ -45,7 +49,7 @@ const CreditCard = () => {
             );
           }}
         >
-          {currentData.cards.map((card, i) => {
+          {filteredCards.map((card, i) => {
             return (
               <div key={i} className="card">
                 <p>{card.cardNumber}</p>

@@ -23,8 +23,8 @@
     color: #ececec;
 }
 
-@media only screen and (max-width: 600px) {
-    /* #root {
-        width: 500px;
-    } */
+
+#no-transactions {
+    color: darkred;
+    padding: 20px 0;
 }

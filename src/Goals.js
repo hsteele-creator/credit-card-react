@@ -17,9 +17,18 @@ const Goals = () => {
     console.log("toggle");
     dispatch({ type: "TOGGLE_GOAL" });
   };
+  
+  const add = () => {
+    console.log("add")
+    dispatch({type : "ADD_GOAL", payload : {name : currentUser, goal : {goal : else.}}})
+  }
 
   return (
     <>
+      <div id="new-goal-container">
+      <input type="text" id="new-goal"></input>
+      <button id="add-goal-btn" onClick={() => add()}>Add Goal</button>
+      </div>
       <ul id="goals">
         {goals.map((goal, i) => {
           return (

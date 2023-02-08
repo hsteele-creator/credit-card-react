@@ -1,4 +1,5 @@
 import { imageListClasses } from "@mui/material";
+import { getStaticContextFromError } from "@remix-run/router";
 import { Data } from "../Data";
 const INITIAL_STATE = { Data };
 
@@ -12,7 +13,6 @@ const rootReducer = (state = INITIAL_STATE, action) => {
         },
       };
     case "ADD_CARD":
-      console.log("card added");
       return {
         ...state,
         Data: {
@@ -23,31 +23,43 @@ const rootReducer = (state = INITIAL_STATE, action) => {
           },
         },
       };
-    case "REMOVE_GOAL":
-      return {
-        ...state,
-        Data: {
-          ...Data,
-          [action.payload.name]: {
-            ...Data[action.payload.name],
-            goals: [
-              ...Data[action.payload.name].goals,
-              { goal: action.payload.goal, completed: false },
-            ],
-          },
-        },
-      };
-    case "TOGGLE_GOAL":
-      return {
-        ...state,
-        Data: {
-          ...Data,
-          [action.payload.name]: {
-            ...Data[action.payload.name],
-            goals: goals.filter((goal) => goal.goal === action.payload.goal),
-          },
-        },
-      };
+      case "ADD_GOAL":
+        return {
+          ...state,
+          Data : {
+            ...Data, 
+            [action.payload.name] : {
+              ...Data[action.payload.name],
+              goals : [...Data[action.payload.name].goals, action.payload.goal]
+            }
+
+          }
+        }
+    // case "REMOVE_GOAL":
+    //   return {
+    //     ...state,
+    //     Data: {
+    //       ...Data,
+    //       [action.payload.name]: {
+    //         ...Data[action.payload.name],
+    //         goals: [
+    //           ...Data[action.payload.name].goals,
+    //           { goal: action.payload.goal, completed: false },
+    //         ],
+    //       },
+    //     },
+    //   };
+    // case "TOGGLE_GOAL":
+    //   return {
+    //     ...state,
+    //     Data: {
+    //       ...Data,
+    //       [action.payload.name]: {
+    //         ...Data[action.payload.name],
+    //         goals: goals.filter((goal) => goal.goal === action.payload.goal),
+    //       },
+    //     },
+    //   };
   }
   return state;
 };
