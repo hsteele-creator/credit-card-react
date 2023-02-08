@@ -23,32 +23,32 @@ const rootReducer = (state = INITIAL_STATE, action) => {
           },
         },
       };
-      case "ADD_GOAL":
-        return {
-          ...state,
-          Data : {
-            ...Data, 
-            [action.payload.name] : {
-              ...Data[action.payload.name],
-              goals : [...Data[action.payload.name].goals, action.payload.goal]
-            }
-
-          }
-        }
-    // case "REMOVE_GOAL":
-    //   return {
-    //     ...state,
-    //     Data: {
-    //       ...Data,
-    //       [action.payload.name]: {
-    //         ...Data[action.payload.name],
-    //         goals: [
-    //           ...Data[action.payload.name].goals,
-    //           { goal: action.payload.goal, completed: false },
-    //         ],
-    //       },
-    //     },
-    //   };
+    case "ADD_GOAL":
+      return {
+        ...state,
+        Data: {
+          ...Data,
+          [action.payload.name]: {
+            ...Data[action.payload.name],
+            goals: [...Data[action.payload.name].goals, action.payload.goal],
+          },
+        },
+      };
+    case "REMOVE_GOAL":
+      return {
+        ...state,
+        Data: {
+          ...Data,
+          [action.payload.name]: {
+            ...Data[action.payload.name],
+            goals: [
+              ...Data[action.payload.name].goals.filter(
+                (goal) => goal.goal === action.payload.goal.goal
+              ),
+            ],
+          },
+        },
+      };
     // case "TOGGLE_GOAL":
     //   return {
     //     ...state,
