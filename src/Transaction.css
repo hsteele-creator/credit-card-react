@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 #transactions-title {
     text-align: center;
     padding-bottom: 10px;
@@ -5,6 +9,7 @@
 
 .transaction-container {
     width: 80%;
+    max-width: 500px;
     justify-content: space-between;
     color: white;
     text-align: center;
@@ -14,15 +19,22 @@
 
 .transaction {
     display: flex;
-    justify-content: space-around;
-    padding: 30px 0;
-    border-radius: 12px;
-    margin: 12px 0;
+    justify-content: space-evenly;
+    padding: 6px;
+    border-radius: 8px;
+    margin: 8px 0;
     border: 3px solid #ececec;
     background-color:  #142d4c;
     color: #ececec;
 }
 
+#transaction {
+    width: 60%;
+}
+
+#price {
+    width: 30%;
+}
 
 #no-transactions {
     color: darkred;

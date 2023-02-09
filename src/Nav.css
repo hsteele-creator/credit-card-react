@@ -12,6 +12,8 @@ ul {
     justify-content: space-around;
     background-color:#385170;
     width: 100vw;
+    height: 5vh;
+    padding-top: 1vh;
 }
 
 .NavLink {
@@ -26,9 +28,3 @@ a {
 a.active {
     color: #ececec;
 }
-
-/* @media only screen and (max-width: 600px) {
-    .nav-container {
-        width: 600px;
-    }
-  } */

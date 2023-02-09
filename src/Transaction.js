@@ -7,16 +7,34 @@ const Transaction = ({ transactions }) => {
     <>
       <h1 id="transactions-title">Transactions</h1>
       <ul className="transaction-container">
-        {transactions ? transactions.map((transaction, i) => {
-          return (
-            <div key={i}>
-              <li className="transaction">
-                <h3 style={{color : transaction.negative === true ? "red" : "#007FFF"}}>{transaction.transaction}</h3>
-                <p style={{color : transaction.negative === true ? "red" : "#007FFF"}}>{transaction.price}</p>
-              </li>
-            </div>
-          );
-        }) : <h1 id="no-transactions">This card does not have any transactions</h1>}
+        {transactions ? (
+          transactions.map((transaction, i) => {
+            return (
+              <div key={i}>
+                <li className="transaction">
+                  <h3
+                    style={{
+                      color: transaction.negative === true ? "red" : "#007FFF",
+                    }}
+                    id="transaction"
+                  >
+                    {transaction.transaction}
+                  </h3>
+                  <p
+                    style={{
+                      color: transaction.negative === true ? "red" : "#007FFF",
+                    }}
+                    id="price"
+                  >
+                    {transaction.price}
+                  </p>
+                </li>
+              </div>
+            );
+          })
+        ) : (
+          <h1 id="no-transactions">This card does not have any transactions</h1>
+        )}
       </ul>
     </>
   );

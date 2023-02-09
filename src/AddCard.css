@@ -2,23 +2,11 @@
     box-sizing: border-box;
 }
 
-/* html {
-   width: 100%;
-    height: 100%;
-}
 
-body {
-    width: 100vw;
-    height: 100vh;
-} */
-
-/* #root {
-    width: 100%;
-    height: 100%;
-} */
 
 #form-container {
     width: 70%;
+    max-width: 500px;
     height: 500px;
     margin-left: auto;
     margin-right: auto;
@@ -26,15 +14,28 @@ body {
 
 input {
     width: 100%;
-    margin: 0 2px;
+    margin: 5px 2px;
     padding: 5px;
-    border-radius: 12px;
+    border-radius: 4px;
     border: none;
 }
 
-/* @media only screen and (min-width: 600px) {
-    #form-container {
-        width: 60%;
-        max-width: 600px;
-    }
-  } */
+#add-card-btn-holder {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#add-card-btn {
+    width: 80px;
+    padding: 12px;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin: 20px 0;
+    color : white;
+    background-color: #385170;
+}
+
+#add-card-button:hover {
+    cursor: pointer;
+}

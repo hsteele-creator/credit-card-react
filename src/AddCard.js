@@ -16,7 +16,7 @@ const AddCard = () => {
 
   const dispatch = useDispatch();
   const currentUser = useSelector((state) => state.Data.currentUser);
-  const store = useSelector(state => state);
+  const store = useSelector((state) => state);
   // console.log(store.Data[currentUser])
 
   const handleChange = (name, value) => {
@@ -27,11 +27,21 @@ const AddCard = () => {
   };
 
   const add = () => {
-    console.log("hello");
-    return dispatch({
-      type: "ADD_CARD",
-      payload: { name: currentUser, data: cardData },
-    });
+    if (
+      cardData.cardType !== "" &&
+      cardData.cardNumber !== "" &&
+      cardData.month !== "" &&
+      cardData.year !== "" &&
+      cardData.cvv !== "" &&
+      cardData.cardbalance !== ""
+    ) {
+      return dispatch({
+        type: "ADD_CARD",
+        payload: { name: currentUser, data: cardData },
+      });
+    } else {
+      alert("No inputs can be blank!")
+    }
   };
 
   // console.log(cardData);
@@ -39,7 +49,7 @@ const AddCard = () => {
   return (
     <>
       <div id="form-container">
-        <h1>Add a Card</h1>
+        <h1 id="card-title">Add a Card</h1>
         <label htmlFor="cardType">Card Type</label>
         <input
           name="cardType"
@@ -96,7 +106,11 @@ const AddCard = () => {
           placeholder="1200"
           onChange={(e) => handleChange("balance", e.target.value)}
         ></input>
-        <button onClick={() => add()}>add card</button>
+        <div id="add-card-btn-holder">
+          <button onClick={() => add()} id="add-card-btn">
+            add card
+          </button>
+        </div>
       </div>
     </>
   );

@@ -1,5 +1,6 @@
 import { imageListClasses } from "@mui/material";
 import { getStaticContextFromError } from "@remix-run/router";
+import { act } from "react-dom/test-utils";
 import { Data } from "../Data";
 const INITIAL_STATE = { Data };
 
@@ -13,59 +14,69 @@ const rootReducer = (state = INITIAL_STATE, action) => {
         },
       };
     case "ADD_CARD":
-      console.log(action.payload.data)
-      const cards = [...state.Data[action.payload.name].cards, action.payload.data];
-      console.log(cards)
+      const updatedCards = [
+        ...state.Data[action.payload.name].cards,
+        action.payload.data,
+      ];
+      const currentUser = action.payload.name;
       return {
         ...state,
         Data: {
           ...Data,
-          [action.payload.name]: {
-            ...Data[action.payload.name],
-            cards: [...state.Data[action.payload.name].cards, action.payload.data],
+          [currentUser]: {
+            ...Data[currentUser],
+            cards: updatedCards,
           },
         },
       };
     case "ADD_GOAL":
+      const curUser = action.payload.name;
+      const updatedGoals = [
+        ...state.Data[curUser].goals,
+        { goal: action.payload.goal, completed: false },
+      ];
       return {
         ...state,
         Data: {
           ...Data,
           [action.payload.name]: {
-            ...Data[action.payload.name],
-            goals: [
-              ...state.Data[action.payload.name].goals,
-              { goal: action.payload.goal, completed: false },
-            ],
+            ...Data[curUser],
+            goals: updatedGoals,
           },
         },
       };
     case "REMOVE_GOAL":
+      const currentGoals = [...state.Data[action.payload.name].goals];
+      const newGoals = currentGoals.filter(
+        (goal) => goal.goal !== action.payload.goal
+      );
       return {
         ...state,
         Data: {
           ...Data,
           [action.payload.name]: {
             ...Data[action.payload.name],
-            goals: [
-              ...Data[action.payload.name].goals.filter(
-                (goal) => goal.goal === action.payload.goal.goal
-              ),
-            ],
+            goals: newGoals,
           },
         },
       };
-    // case "TOGGLE_GOAL":
-    //   return {
-    //     ...state,
-    //     Data: {
-    //       ...Data,
-    //       [action.payload.name]: {
-    //         ...Data[action.payload.name],
-    //         goals: goals.filter((goal) => goal.goal === action.payload.goal),
-    //       },
-    //     },
-    //   };
+    case "TOGGLE_GOAL":
+      const oldGoals = [...state.Data[action.payload.name].goals];
+      const toggledGoals = oldGoals.map((goal) =>
+        goal.goal === action.payload.goal
+          ? {...goal, completed : !goal.completed}
+          : goal
+      );
+      return {
+        ...state,
+        Data: {
+          ...Data,
+          [action.payload.name]: {
+            ...Data[action.payload.name],
+            goals: toggledGoals,
+          },
+        },
+      };
   }
   return state;
 };
