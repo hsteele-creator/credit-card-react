@@ -23,7 +23,7 @@ const Goals = () => {
     console.log("add");
     dispatch({
       type: "ADD_GOAL",
-      payload: { name: currentUser, goal: {name : currentUser, goal } },
+      payload: { name: currentUser, goal,}
     });
   };
 

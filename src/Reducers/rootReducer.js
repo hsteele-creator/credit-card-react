@@ -13,13 +13,16 @@ const rootReducer = (state = INITIAL_STATE, action) => {
         },
       };
     case "ADD_CARD":
+      console.log(action.payload.data)
+      const cards = [...state.Data[action.payload.name].cards, action.payload.data];
+      console.log(cards)
       return {
         ...state,
         Data: {
           ...Data,
           [action.payload.name]: {
             ...Data[action.payload.name],
-            cards: [...Data[action.payload.name].cards, action.payload.data],
+            cards: [...state.Data[action.payload.name].cards, action.payload.data],
           },
         },
       };
@@ -30,7 +33,10 @@ const rootReducer = (state = INITIAL_STATE, action) => {
           ...Data,
           [action.payload.name]: {
             ...Data[action.payload.name],
-            goals: [...Data[action.payload.name].goals, action.payload.goal],
+            goals: [
+              ...state.Data[action.payload.name].goals,
+              { goal: action.payload.goal, completed: false },
+            ],
           },
         },
       };

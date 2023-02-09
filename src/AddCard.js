@@ -17,7 +17,7 @@ const AddCard = () => {
   const dispatch = useDispatch();
   const currentUser = useSelector((state) => state.Data.currentUser);
   const store = useSelector(state => state);
-  console.log(store.Data[currentUser])
+  // console.log(store.Data[currentUser])
 
   const handleChange = (name, value) => {
     setCardData((cardData) => ({
