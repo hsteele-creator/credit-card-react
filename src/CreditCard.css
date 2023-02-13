@@ -64,3 +64,7 @@
   border: 1px solid #ececec;
   background-color: #385170;
 }
+
+#add-card:hover {
+  cursor: pointer;
+}
