@@ -1,6 +1,29 @@
 #update-info-title {
     text-align: center;
-    margin: 20px 0;
+    padding: 20px 0;
+}
+
+#remove-card {
+    width: 50vw;
+    height: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+    margin-bottom: 50px;
+}
+
+#remove-card-title {
+    padding: 20px 0;
+}
+
+select, button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 3\10px;
+}
+
+#card-select {
+    margin-bottom: 30px;
 }
 
 #img-container {
@@ -12,4 +35,34 @@
 #current-user-img {
    width: 200px;
    border-radius: 10%;
+}
+
+#input-container {
+    width: 200px;
+}
+
+
+#img-btn {
+    margin: 10px 50px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 8px;
+    color : white;
+    background-color: #385170;
+}
+
+#img-btn:hover {
+    cursor: pointer;
+}
+
+#remove-card-btn {
+    padding: 6px;
+    border: 1px solid white;
+    border-radius: 8px;
+    color : white;
+    background-color: #385170;
+}
+
+#remove-card-btn:hover {
+    cursor: pointer;
 }

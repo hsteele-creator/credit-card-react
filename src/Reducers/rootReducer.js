@@ -64,7 +64,7 @@ const rootReducer = (state = INITIAL_STATE, action) => {
       const oldGoals = [...state.Data[action.payload.name].goals];
       const toggledGoals = oldGoals.map((goal) =>
         goal.goal === action.payload.goal
-          ? {...goal, completed : !goal.completed}
+          ? { ...goal, completed: !goal.completed }
           : goal
       );
       return {
@@ -74,6 +74,33 @@ const rootReducer = (state = INITIAL_STATE, action) => {
           [action.payload.name]: {
             ...Data[action.payload.name],
             goals: toggledGoals,
+          },
+        },
+      };
+    case "UPDATE_IMAGE":
+      return {
+        ...state,
+        Data: {
+          ...Data,
+          [action.payload.name]: {
+            ...Data[action.payload.name],
+            image: [action.payload.image],
+          },
+        },
+      };
+    case "REMOVE_CARD":
+      const filteredCards = [
+        ...state.Data[action.payload.name].cards.filter(
+          (card) => card.cardNumber !== action.payload.cardNumber
+        ),
+      ];
+      return {
+        ...state,
+        Data: {
+          ...Data,
+          [action.payload.name]: {
+            ...Data[action.payload.name],
+            cards: filteredCards,
           },
         },
       };

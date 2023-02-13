@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./Goals.css";
+import { addGoal, removeGoal, toggleGoal } from "./Actions";
 
 const Goals = () => {
   const dispatch = useDispatch();
@@ -10,27 +11,18 @@ const Goals = () => {
   const [newGoal, setNewGoal] = useState("");
 
   const remove = (goal) => {
-    console.log("remove");
-    dispatch({
-      type: "REMOVE_GOAL",
-      payload: { name: currentUser, goal },
-    });
+    dispatch(removeGoal(currentUser, goal));
   };
 
   const toggle = (goal) => {
-    console.log("toggle");
-    dispatch({ type: "TOGGLE_GOAL", payload: { name: currentUser, goal } });
+    dispatch(toggleGoal(currentUser, goal));
   };
 
   const add = () => {
-    console.log("add");
     if (newGoal !== "") {
-      dispatch({
-        type: "ADD_GOAL",
-        payload: { name: currentUser, goal: newGoal },
-      });
+      dispatch(addGoal(currentUser, newGoal));
     } else {
-      alert("Goal can not be blank!")
+      alert("Goal can not be blank!");
     }
   };
 
@@ -48,7 +40,6 @@ const Goals = () => {
       </div>
       <ul id="goals">
         {goals.map((goal, i) => {
-          console.log(goal);
           return (
             <div key={i} id="todo">
               <li

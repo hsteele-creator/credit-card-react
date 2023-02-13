@@ -6,7 +6,7 @@ import Home from "./Home";
 import AddCard from "./AddCard";
 import Goals from "./Goals";
 import Nav from "./Nav";
-import UpdateInfo from "./UpdateInfo";
+import UpdatePicture from "./UpdatePicture";
 import Avatars from "./Avatars";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Goals" element={<Goals />} />
           <Route exact path="/AddCard" element={<AddCard />} />
-          <Route exact path="/UpdateInfo" element={<UpdateInfo />} />
+          <Route exact path="/UpdatePicture" element={<UpdatePicture />} />
         </Routes>
       </BrowserRouter>
     </>

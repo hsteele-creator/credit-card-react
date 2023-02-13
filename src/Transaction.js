@@ -2,7 +2,7 @@ import React from "react";
 import "./Transaction.css";
 
 const Transaction = ({ transactions }) => {
-  console.log(transactions);
+  // console.log(transactions);
   return (
     <>
       <h1 id="transactions-title">Transactions</h1>

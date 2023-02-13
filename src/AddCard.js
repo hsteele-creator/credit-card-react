@@ -2,7 +2,7 @@ import React from "react";
 import "./AddCard.css";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addCard, ADD_CARD } from "./Actions";
+import { addCard } from "./Actions";
 
 const AddCard = () => {
   const [cardData, setCardData] = useState({
@@ -17,7 +17,6 @@ const AddCard = () => {
   const dispatch = useDispatch();
   const currentUser = useSelector((state) => state.Data.currentUser);
   const store = useSelector((state) => state);
-  // console.log(store.Data[currentUser])
 
   const handleChange = (name, value) => {
     setCardData((cardData) => ({
@@ -35,16 +34,11 @@ const AddCard = () => {
       cardData.cvv !== "" &&
       cardData.cardbalance !== ""
     ) {
-      return dispatch({
-        type: "ADD_CARD",
-        payload: { name: currentUser, data: cardData },
-      });
+      dispatch(addCard(currentUser, cardData));
     } else {
-      alert("No inputs can be blank!")
+      alert("No inputs can be blank!");
     }
   };
-
-  // console.log(cardData);
 
   return (
     <>

@@ -3,7 +3,6 @@
 }
 
 
-
 #form-container {
     width: 70%;
     max-width: 500px;
@@ -36,6 +35,6 @@ input {
     background-color: #385170;
 }
 
-#add-card-button:hover {
+#add-card-btn:hover {
     cursor: pointer;
 }
