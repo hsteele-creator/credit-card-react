@@ -22,7 +22,7 @@ const Avatars = () => {
               className="avatar"
               src={store[name].image}
               onClick={() => dispatch(updateUser(name))}
-              style={{border : name === currentUser ? "1px solid white" : "none", }}
+              style={{border : name === currentUser ? "2px solid black" : "none", width: name === currentUser ? "40px" : "30px"}}
             />
           </div>
         );
