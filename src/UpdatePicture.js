@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Button, TextField } from "@mui/material";
 import "./UpdateInfo.css";
 
-
-const UpdatePicture= () => {
+const UpdatePicture = () => {
   const dispatch = useDispatch();
   const store = useSelector((state) => state.Data);
   const currrentUser = useSelector((state) => state.Data.currentUser);
@@ -33,14 +33,20 @@ const UpdatePicture= () => {
         <img id="current-user-img" src={image} />
 
         <div id="input-container">
-          <input
+          <TextField
+            id="new-url"
+            size="small"
             placeholder="new image url"
             onChange={(e) => setNewImage(e.target.value)}
             value={newImage}
           />
-          <button id="img-btn" onClick={() => changeImage()}>
+          <Button
+            variant="contained"
+            id="img-btn"
+            onClick={() => changeImage()}
+          >
             Change Image
-          </button>
+          </Button>
         </div>
       </div>
     </>

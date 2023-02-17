@@ -4,11 +4,11 @@
 
 #transactions-title {
     text-align: center;
-    padding-bottom: 10px;
+    margin: 100px 0 20px 0;
 }
 
 .transaction-container {
-    width: 80%;
+    width: 60%;
     max-width: 500px;
     justify-content: space-between;
     color: white;
@@ -20,12 +20,10 @@
 .transaction {
     display: flex;
     justify-content: space-evenly;
-    padding: 6px;
-    border-radius: 8px;
-    margin: 8px 0;
-    border: 3px solid #ececec;
-    background-color:  #142d4c;
-    color: #ececec;
+    padding: 1.5rem 0;
+    background-color: #1552F0;
+    margin: 20px 0;
+    border-radius: 5px;
 }
 
 #transaction {

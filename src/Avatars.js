@@ -12,7 +12,7 @@ const Avatars = () => {
     (name) =>
       name !== "currentUser" && name !== "currentCard" && name !== "cardIndex"
   );
-  
+
   return (
     <div className="images-container">
       {names.map((name, i) => {
@@ -22,7 +22,11 @@ const Avatars = () => {
               className="avatar"
               src={store[name].image}
               onClick={() => dispatch(updateUser(name))}
-              style={{border : name === currentUser ? "2px solid black" : "none", width: name === currentUser ? "40px" : "30px"}}
+              style={{
+                border: name === currentUser ? "3px solid black" : "none",
+                width: name === currentUser ? "50px" : "30px",
+                height: name === currentUser ? "50px" : "30px",
+              }}
             />
           </div>
         );

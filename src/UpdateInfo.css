@@ -37,32 +37,18 @@ select, button {
    border-radius: 10%;
 }
 
+
 #input-container {
     width: 200px;
+    text-align: center;
+    margin: 10px 0;
 }
 
-
 #img-btn {
-    margin: 10px 50px;
-    padding: 5px;
-    border: 1px solid white;
-    border-radius: 8px;
-    color : white;
-    background-color: #385170;
+    margin: 10px 0;
+    background-color: #1552F0;
 }
 
 #img-btn:hover {
-    cursor: pointer;
-}
-
-#remove-card-btn {
-    padding: 6px;
-    border: 1px solid white;
-    border-radius: 8px;
-    color : white;
-    background-color: #385170;
-}
-
-#remove-card-btn:hover {
     cursor: pointer;
 }

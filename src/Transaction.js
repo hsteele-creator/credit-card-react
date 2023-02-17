@@ -5,7 +5,7 @@ const Transaction = ({ transactions }) => {
   // console.log(transactions);
   return (
     <>
-      <h1 id="transactions-title">Transactions</h1>
+      <h2 id="transactions-title">Recent Transactions</h2>
       <ul className="transaction-container">
         {transactions ? (
           transactions.map((transaction, i) => {
@@ -13,17 +13,11 @@ const Transaction = ({ transactions }) => {
               <div key={i}>
                 <li className="transaction">
                   <h3
-                    style={{
-                      color: transaction.negative === true ? "red" : "#007FFF",
-                    }}
                     id="transaction"
                   >
                     {transaction.transaction}
                   </h3>
                   <p
-                    style={{
-                      color: transaction.negative === true ? "red" : "#007FFF",
-                    }}
                     id="price"
                   >
                     {transaction.price}

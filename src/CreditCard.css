@@ -13,7 +13,6 @@
   text-align: center;
   padding: 7px 0;
   font-size: 12px;
-  color: #ececec;
 }
 
 .card {
@@ -22,11 +21,10 @@
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #ececec;
   border-radius: 12px;
-  background-color: #385170;
-  border: 1px solid #ececec;
   position: relative;
+  background-color: black;
+  color: white;
 }
 
 #remove-btn {
@@ -37,7 +35,7 @@
   border-radius: 50%;
   border: none;
   position: absolute;
-  top: 3%;
+  top: 5%;
   left: 3%;
 }
 
@@ -46,23 +44,12 @@
 }
 
 #button-container {
-  width: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
-  margin-top: 20px;
+ width: 109px;
+ margin: 20px auto 20px auto;
 }
 
 #add-card {
-  width: 150px;
-  border: 1px solid;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 0;
-  border-radius: 12px;
-  color: #ececec;
-  border: 1px solid #ececec;
-  background-color: #385170;
+ background-color: #1552F0;
 }
 
 #add-card:hover {

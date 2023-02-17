@@ -3,7 +3,7 @@ import "./AddCard.css";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addCard } from "./Actions";
-import { TextField } from "@mui/material";
+import { TextField, Button } from "@mui/material";
 
 const AddCard = () => {
   const [cardData, setCardData] = useState({
@@ -114,9 +114,9 @@ const AddCard = () => {
         ></TextField>
 
         <div id="add-card-btn-holder">
-          <button onClick={() => add()} id="add-card-btn">
-            add card
-          </button>
+          <Button id="add-card-btn" variant="contained" onClick={() => add()}>
+            Add Card
+          </Button>
         </div>
       </div>
     </>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./Goals.css";
 import { addGoal, removeGoal, toggleGoal } from "./Actions";
+import { TextField, Button } from "@mui/material";
 
 const Goals = () => {
   const dispatch = useDispatch();
@@ -34,9 +35,9 @@ const Goals = () => {
           id="new-goal"
           onChange={(e) => setNewGoal(e.target.value)}
         ></input>
-        <button id="add-goal-btn" onClick={() => add()}>
+        <Button variant="contained" id="add-goal-btn" onClick={() => add()}>
           add
-        </button>
+        </Button>
       </div>
       <ul id="goals">
         {goals.map((goal, i) => {

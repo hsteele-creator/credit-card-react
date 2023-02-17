@@ -7,6 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 import Transaction from "./Transaction";
 import { NavLink } from "react-router-dom";
 import { removeCard } from "./Actions";
+import { Button } from "@mui/material";
 
 const CreditCard = () => {
   const [cardIndex, setCardIndex] = useState(0);
@@ -84,7 +85,7 @@ const CreditCard = () => {
 
         <NavLink to="/AddCard">
           <div id="button-container">
-            <button id="add-card">Add Card</button>
+            <Button variant="contained" id="add-card">Add Card</Button>
           </div>
         </NavLink>
 
