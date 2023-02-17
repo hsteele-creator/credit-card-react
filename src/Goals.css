@@ -16,7 +16,7 @@
 
 #add-goal-btn {
   width: 20%;
-  background-color: #1552F0;
+  background-color: #455d7a; 
 }
 
 #add-goal-btn:hover {
@@ -28,7 +28,7 @@
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #1552F0;
+  /* background-color: #455d7a;  */
   color: white;
   border-radius: 2px;
 }
@@ -37,6 +37,10 @@
   display: flex;
   justify-content: space-around;
   margin: 20px;
+  background-color: #455d7a;
+  text-align: left;
+  padding: 5px 20px;
+  border-radius: 3px;
 }
 
 #goal {

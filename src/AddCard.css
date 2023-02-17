@@ -20,10 +20,14 @@
 }
 
 #add-card-btn {
-    background-color: #1552F0;
+    background-color: #455d7a; ;
     margin: 10px 0;
 }
 
 #add-card-btn:hover {
     cursor: pointer;
+}
+
+#cvv {
+    width: 50%;
 }

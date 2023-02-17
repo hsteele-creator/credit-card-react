@@ -21,9 +21,9 @@
     display: flex;
     justify-content: space-evenly;
     padding: 1.5rem 0;
-    background-color: #1552F0;
+    background-color: #455d7a;
     margin: 20px 0;
-    border-radius: 5px;
+    border-radius: 50px;
 }
 
 #transaction {
