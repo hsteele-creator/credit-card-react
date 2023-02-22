@@ -85,9 +85,9 @@ const CreditCard = () => {
                 <p id="expiration">{card.month + "/" + card.year}</p>
                 <p id="cvv">CVV</p>
                 <p id="cvv-number">{card.cvv}</p>
-                <button id="remove-btn" onClick={() => remove(card.cardNumber)}>
+                {/* <button id="remove-btn" onClick={() => remove(card.cardNumber)}>
                   x
-                </button>
+                </button> */}
               </div>
             );
           })}
