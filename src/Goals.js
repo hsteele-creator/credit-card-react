@@ -51,10 +51,10 @@ const Goals = () => {
               </li>
               <div id="buttons">
               <button id="remove" onClick={() => remove(goal.goal)}>
-                🚮
+              ❌
               </button>
               <button id="toggle" onClick={() => toggle(goal.goal)}>
-                ✅
+              ✅
               </button>
               </div>
             </div>

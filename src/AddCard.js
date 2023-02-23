@@ -49,6 +49,7 @@ const AddCard = () => {
         <TextField
           margin="normal"
           name="cardType"
+          label="Card Type"
           id="cardType"
           type="text"
           placeholder="Mastercard"

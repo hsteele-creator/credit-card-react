@@ -45,7 +45,7 @@
 #todo {
   display: flex;
   border-radius: 3px;
-  border: 1px solid;
+  border: 0.5px solid lightslategray;
   width: 100%;
   padding: 0 10px;
   margin: 20px 0;
