@@ -53,6 +53,7 @@ const AddCard = () => {
           type="text"
           placeholder="Mastercard"
           onChange={(e) => handleChange("cardType", e.target.value)}
+          className="input"
         ></TextField>
 
         {/* <label htmlFor="cardNumber">Card Number</label> */}
@@ -64,6 +65,7 @@ const AddCard = () => {
           type="text"
           placeholder="4539 9256 5662 3410"
           onChange={(e) => handleChange("cardNumber", e.target.value)}
+          className="input"
         ></TextField>
 
         {/* <label htmlFor="month">Expiration Month</label> */}
@@ -76,6 +78,7 @@ const AddCard = () => {
           type="text"
           maxLength="2"
           onChange={(e) => handleChange("month", e.target.value)}
+          className="input"
         ></TextField>
 
         {/* <label htmlFor="year">Expiration Year</label> */}
@@ -88,6 +91,7 @@ const AddCard = () => {
           type="text"
           maxLength="4"
           onChange={(e) => handleChange("year", e.target.value)}
+          className="input"
         ></TextField>
 
         {/* <label htmlFor="cvv">CVV</label> */}
@@ -99,6 +103,7 @@ const AddCard = () => {
           type="password"
           maxLength="3"
           onChange={(e) => handleChange("cvv", e.target.value)}
+          className="input"
         ></TextField>
 
         {/* <label htmlFor="balance">Card Balance</label> */}
@@ -110,6 +115,7 @@ const AddCard = () => {
           type="text"
           placeholder="1200"
           onChange={(e) => handleChange("balance", e.target.value)}
+          className="input"
         ></TextField>
 
         <div id="add-card-btn-holder">
