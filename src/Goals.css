@@ -23,11 +23,15 @@
 
 #new-goal {
   width: 70%;
+  height: 40px;
 }
 
 #add-goal-btn {
   background-color: #455d7a; 
   width: 18%;
+  height: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 #add-goal-btn:hover {
@@ -51,6 +55,8 @@
   border-radius: 6px;
   background-color: #455d7a;
   color: white;
+  text-align: left;
+  align-items: center;
 }
 
 #goal {

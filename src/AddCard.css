@@ -31,3 +31,9 @@
 #cvv {
     width: 50%;
 }
+
+input {
+    padding: 20px;
+    text-align: left;
+    margin: 10px;
+}

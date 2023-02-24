@@ -46,78 +46,78 @@ const AddCard = () => {
       <div id="form-container">
         <h1 id="card-title">Add a Card</h1>
         {/* <label htmlFor="cardType">Card Type</label> */}
-        <TextField
+        <input
           margin="normal"
           name="cardType"
           label="Card Type"
           id="cardType"
           type="text"
-          placeholder="Mastercard"
+          placeholder="Card Type"
           onChange={(e) => handleChange("cardType", e.target.value)}
           className="input"
-        ></TextField>
+        ></input>
 
         {/* <label htmlFor="cardNumber">Card Number</label> */}
-        <TextField
+        <input
           margin="normal"
           label="Card Number"
           name="cardNumber"
           id="cardNumber"
           type="text"
-          placeholder="4539 9256 5662 3410"
+          placeholder="Card Number"
           onChange={(e) => handleChange("cardNumber", e.target.value)}
           className="input"
-        ></TextField>
+        ></input>
 
         {/* <label htmlFor="month">Expiration Month</label> */}
-        <TextField
+        <input
           margin="normal"
           label="month"
           name="month"
           id="month"
-          placeholder="08"
+          placeholder="Month"
           type="text"
           maxLength="2"
           onChange={(e) => handleChange("month", e.target.value)}
           className="input"
-        ></TextField>
+        ></input>
 
         {/* <label htmlFor="year">Expiration Year</label> */}
-        <TextField
+        <input
           margin="normal"
           label="year"
           name="year"
           id="year"
-          placeholder="2024"
+          placeholder="Year"
           type="text"
           maxLength="4"
           onChange={(e) => handleChange("year", e.target.value)}
           className="input"
-        ></TextField>
+        ></input>
 
         {/* <label htmlFor="cvv">CVV</label> */}
-        <TextField
+        <input
           margin="normal"
           label="cvv"
           name="cvv"
-          placeholder="2024"
+          placeholder="CVV"
           type="password"
           maxLength="3"
           onChange={(e) => handleChange("cvv", e.target.value)}
           className="input"
-        ></TextField>
+        ></input>
 
         {/* <label htmlFor="balance">Card Balance</label> */}
-        <TextField
+        <input
           margin="normal"
           label="balance"
           name="balance"
           id="balance"
           type="text"
-          placeholder="1200"
+          placeholder="Balance"
           onChange={(e) => handleChange("balance", e.target.value)}
           className="input"
-        ></TextField>
+        ></input>
 
         <div id="add-card-btn-holder">
           <Button id="add-card-btn" variant="contained" onClick={() => add()}>
