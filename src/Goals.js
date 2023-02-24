@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import "./Goals.css";
 import { addGoal, removeGoal, toggleGoal } from "./Actions";
 import { TextField, Button } from "@mui/material";
+import Trashcan from "./trash-bin.png"
 
 const Goals = () => {
   const dispatch = useDispatch();
@@ -43,26 +44,29 @@ const Goals = () => {
         {goals.map((goal, i) => {
           return (
             <div key={i} id="todo">
+              <div id="buttons">
+                {/* <button id="remove" onClick={() => remove(goal.goal)}>
+                  Done
+                </button> */}
+                <input type="checkbox" onClick={() => toggle(goal.goal)}  />
+                <button id="toggle" onClick={() => remove(goal.goal)}>
+                <img id="trash" src={Trashcan} />
+                </button>
+              </div>
               <li
                 id="goal"
                 className={goal.completed === true ? "complete" : ""}
               >
                 {goal.goal}
               </li>
-              <div id="buttons">
-              <button id="remove" onClick={() => remove(goal.goal)}>
-              ❌
-              </button>
-              <button id="toggle" onClick={() => toggle(goal.goal)}>
-              ✅
-              </button>
-              </div>
             </div>
           );
         })}
       </ul>
+
     </>
   );
 };
 
 export default Goals;
+
