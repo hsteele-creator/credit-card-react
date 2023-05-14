@@ -9,11 +9,11 @@ ul {
 
 .nav-container {
     display: flex;
-    justify-content: space-around;
-    background-color: #455d7a;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #455d7a; */
     width: 100vw;
-    height: 5vh;
-    padding-top: 1vh;
+    height: 8vh;
 }
 
 .NavLink {
@@ -23,8 +23,17 @@ ul {
 a {
     text-decoration: none;
     color: lightslategray;
+    margin: 0 30px;
+
 }
 
 a.active {
-    color: white;
+    color: black;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    a {
+        margin: 0 10px;
+    }
 }

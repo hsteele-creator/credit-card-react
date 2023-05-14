@@ -20,7 +20,7 @@ const Transaction = ({ transactions }) => {
                   <p
                     id="price"
                   >
-                    {transaction.price}
+                    ${transaction.price}
                   </p>
                 </li>
               </div>
