@@ -3,32 +3,34 @@
 }
 
 #transactions-title {
-    text-align: center;
     font-size: 40px;
-    margin: 100px 0 20px 0;
+    margin: 100px 0 50px 0;
+    text-decoration: underline;
 }
 
 .transaction-container {
     width: 80%;
-    max-width: 500px;
+    max-width: 400px;
     justify-content: space-between;
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
+    font-size: 14px;
 }
 
 .transaction {
     display: flex;
     justify-content: space-evenly;
-    padding: 30px 0;
+    align-items: center;
     margin: 20px 0;
-    border-radius: 16px;
-    border: .5px solid;
-    /* background-color: black; */
+    border-radius: 14px;
+    /* text-align: left; */
+    background-color: lightblue;
+    height: 70px;
 }
 
 #transaction {
     width: 60%;
+    text-align: center;
 }
 
 #price {

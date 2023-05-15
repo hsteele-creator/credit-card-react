@@ -15,9 +15,9 @@ export const Data = {
         cvv: 631,
         balance: `24,000`,
         transactions: [
-          { price: "-5", transaction: "starbucks", negative: true },
-          { price: "1,000", transaction: "paycheck", negative: false },
-          { price: "-125", transaction: "red sox tickets", negative: true },
+          { price: "-5", transaction: "Starbucks", negative: true },
+          { price: "1,000", transaction: "Paycheck", negative: false },
+          { price: "-125", transaction: "Red Sox Tickets", negative: true },
         ],
       },
       {
@@ -28,9 +28,9 @@ export const Data = {
         cvv: 183,
         balance: `12,500`,
         transactions: [
-          { price: "-7.50", transaction: "walgreens", negative: true },
-          { price: "-1,800", transaction: "rent", negative: true },
-          { price: "-85", transaction: "karate lessons", negative: true },
+          { price: "-7.50", transaction: "Walgreens", negative: true },
+          { price: "-1,800", transaction: "Rent", negative: true },
+          { price: "-85", transaction: "Karate Lessons", negative: true },
         ],
       },
       {
@@ -41,16 +41,16 @@ export const Data = {
         cvv: 410,
         balance: `8,750`,
         transactions: [
-          { price: "-350", transaction: "car payment", negative: true },
-          { price: "120", transaction: "birthday gift", negative: false },
-          { price: "-180", transaction: "plumber fees", negative: true },
+          { price: "-350", transaction: "Car Payment", negative: true },
+          { price: "120", transaction: "Birthday Gift", negative: false },
+          { price: "-180", transaction: "Plumber Fees", negative: true },
         ],
       },
     ],
     goals: [
-      { goal: "make a savings account", completed: false },
-      { goal: "save money for a diamond ring", completed: false },
-      { goal: "pay off college debt", completed: false },
+      { goal: "Make a Savings Account", completed: false },
+      { goal: "Save Money for a Diamond Ring", completed: false },
+      { goal: "Pay Off College Debt", completed: false },
     ],
   },
 
@@ -67,9 +67,9 @@ export const Data = {
         cvv: 268,
         balance: `2,500`,
         transactions: [
-          { price: "-12", transaction: "pizza", negative: true },
-          { price: "1,400", transaction: "paycheck", negative: false },
-          { price: "-80", transaction: "broadway tickets", negative: true },
+          { price: "-12", transaction: "Pizza", negative: true },
+          { price: "1,400", transaction: "Paycheck", negative: false },
+          { price: "-80", transaction: "Broadway Tickets", negative: true },
         ],
       },
       {
@@ -80,9 +80,9 @@ export const Data = {
         cvv: 732,
         balance: `3,800`,
         transactions: [
-          { price: "-40", transaction: "gas", negative: true },
-          { price: "-30", transaction: "chinese food", negative: true },
-          { price: "-100", transaction: "winter jacket", negative: true },
+          { price: "-40", transaction: "Gas", negative: true },
+          { price: "-30", transaction: "Chinese Food", negative: true },
+          { price: "-100", transaction: "Winter Jacket", negative: true },
         ],
       },
       {
@@ -93,16 +93,16 @@ export const Data = {
         cvv: 143,
         balance: `4,200`,
         transactions: [
-          { price: "-120", transaction: "electric bill", negative: true },
-          { price: "120", transaction: "wedding present", negative: false },
-          { price: "-1,100", transaction: "new windows", negative: true },
+          { price: "-120", transaction: "Electric Bill", negative: true },
+          { price: "120", transaction: "Wedding Present", negative: false },
+          { price: "-1,100", transaction: "New Windows", negative: true },
         ],
       },
     ],
     goals: [
-      { goal: "increase salary by 10%", completed: false },
-      { goal: "buy a new car", completed: false },
-      { goal: "set aside money for kids college fund", completed: false },
+      { goal: "Increase Salary by 10%", completed: false },
+      { goal: "Buy a New Car", completed: false },
+      { goal: "Set Aside Money for Kids College Fund", completed: false },
     ],
   },
 
@@ -119,9 +119,9 @@ export const Data = {
         cvv: 437,
         balance: `500`,
         transactions: [
-          { price: "-10", transaction: "coffee and donut", negative: true },
-          { price: "2,000", transaction: "rent payments", negative: false },
-          { price: "-40", transaction: "ice skating", negative: true },
+          { price: "-10", transaction: "Coffee and Donut", negative: true },
+          { price: "2,000", transaction: "Rent Payments", negative: false },
+          { price: "-40", transaction: "Ice Skating", negative: true },
         ],
       },
       {
@@ -132,9 +132,9 @@ export const Data = {
         cvv: 108,
         balance: `5,100`,
         transactions: [
-          { price: "-2", transaction: "711 slurpee", negative: true },
-          { price: "-60", transaction: "new shirts", negative: true },
-          { price: "-50", transaction: "new sneakers", negative: true },
+          { price: "-2", transaction: "711 Slurpee", negative: true },
+          { price: "-60", transaction: "New Shirts", negative: true },
+          { price: "-50", transaction: "New Sneakers", negative: true },
         ],
       },
       {
@@ -145,16 +145,16 @@ export const Data = {
         cvv: 700,
         balance: `2,650`,
         transactions: [
-          { price: "-160", transaction: "dentist appointment", negative: true },
-          { price: "-15", transaction: "new backpack", negative: true },
-          { price: "-300", transaction: "graduation gift", negative: false },
+          { price: "-160", transaction: "Dentist Appointment", negative: true },
+          { price: "-15", transaction: "New Backpack", negative: true },
+          { price: "-300", transaction: "Graduation Gift", negative: false },
         ],
       },
     ],
     goals: [
-      { goal: "buy a new phone", completed: false },
-      { goal: "save for house down payment", completed: false },
-      { goal: "get another source of income", completed: false },
+      { goal: "Buy a New Phone", completed: false },
+      { goal: "Save for House Down Payment", completed: false },
+      { goal: "Get Another Source of Income", completed: false },
     ],
   },
 };

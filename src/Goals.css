@@ -10,6 +10,7 @@
   margin: 20px auto 20px auto;
 }
 
+
 #todo {
   display: flex;
   justify-content: space-around;
@@ -57,6 +58,7 @@
   color: white;
   text-align: left;
   align-items: center;
+  border-radius: 14px;
 }
 
 #goal {
